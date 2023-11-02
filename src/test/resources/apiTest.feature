@@ -9,6 +9,7 @@ Feature: Automation II section 2
       "Password": "abc123"
     }
     """
+#    /api/user/0.json
     Then response code should be 200
     And the attribute "FullName" should be "userTest"
     And the attribute "Email" should be "userTest@userTest.com"

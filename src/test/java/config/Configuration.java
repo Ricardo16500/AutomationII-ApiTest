@@ -6,8 +6,8 @@ public class Configuration {
      * password: ApiTestFabioVaquera1234
      */
     public static String host = "http://todo.ly";
-//    public static String user = "apiTestFV@apitest.com";
-//    public static String password = "ApiTestFabioVaquera1234";
+    public static String user = "userTest@userTest.com";
+    public static String password = "abc123";
 
 
 }

@@ -8,7 +8,6 @@ public class RequestPost implements IRequest {
     @Override
     public Response send(RequestInfo requestInfo) {
         Response response =given()
-                .headers(requestInfo.getHeader())
                 .body(requestInfo.getBody())
                 .log().all()
                 .when()
