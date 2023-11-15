@@ -22,6 +22,7 @@ public class MyStepdefs {
     public void sendPOSTRequestWithBody(String method, String url, String body) {
         requestInfo.setUrl(Configuration.host+this.replaceValues(url)).setBody(body);
         response = FactoryRequest.make(method).send(requestInfo);
+        System.out.println(response.asString());
         
     }
 
