@@ -22,12 +22,8 @@ public class MyStepdefs {
     public void sendPOSTRequestWithBody(String method, String url, String body) {
         requestInfo.setUrl(Configuration.host+this.replaceValues(url)).setBody(body);
         response = FactoryRequest.make(method).send(requestInfo);
-        System.out.println(response.asString());
         
     }
-
-
-
     @Then("response code should be {int}")
     public void responseCodeShouldBe(int expectedCode) {
         response.then().statusCode(expectedCode);
@@ -50,8 +46,6 @@ public class MyStepdefs {
         requestInfo = new RequestInfo();
         requestInfo.setHeader("Token",token);
     }
-
-
     private String replaceValues(String value){
         for (String key:variables.keySet() ) {
             value=value.replace(key,variables.get(key));
